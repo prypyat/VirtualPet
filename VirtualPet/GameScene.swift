@@ -294,6 +294,7 @@ class GameScene: SKScene
         addChild(good)
         addChild(okay)
         addChild(bad)
+        addChild(eatface)
         
         great.hidden = false
         good.hidden = true
