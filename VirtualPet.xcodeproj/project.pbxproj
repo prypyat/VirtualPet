@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5ADA27791C15406700899CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA27781C15406700899CED /* AppDelegate.swift */; };
+		5ADA277B1C15406700899CED /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ADA277A1C15406700899CED /* GameScene.sks */; };
+		5ADA277D1C15406700899CED /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA277C1C15406700899CED /* GameScene.swift */; };
+		5ADA277F1C15406700899CED /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA277E1C15406700899CED /* GameViewController.swift */; };
+		5ADA27821C15406700899CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADA27801C15406700899CED /* Main.storyboard */; };
+		5ADA27841C15406700899CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ADA27831C15406700899CED /* Assets.xcassets */; };
+		5ADA27871C15406700899CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADA27851C15406700899CED /* LaunchScreen.storyboard */; };
+		5ADA27921C15406700899CED /* VirtualPetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA27911C15406700899CED /* VirtualPetTests.swift */; };
+		5ADA279D1C15406700899CED /* VirtualPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA279C1C15406700899CED /* VirtualPetUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5ADA278E1C15406700899CED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ADA276D1C15406600899CED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ADA27741C15406600899CED;
+			remoteInfo = VirtualPet;
+		};
+		5ADA27991C15406700899CED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ADA276D1C15406600899CED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ADA27741C15406600899CED;
+			remoteInfo = VirtualPet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5ADA27751C15406700899CED /* VirtualPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ADA27781C15406700899CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5ADA277A1C15406700899CED /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5ADA277C1C15406700899CED /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5ADA277E1C15406700899CED /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5ADA27811C15406700899CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5ADA27831C15406700899CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5ADA27861C15406700899CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5ADA27881C15406700899CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ADA278D1C15406700899CED /* VirtualPetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirtualPetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ADA27911C15406700899CED /* VirtualPetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPetTests.swift; sourceTree = "<group>"; };
+		5ADA27931C15406700899CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ADA27981C15406700899CED /* VirtualPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirtualPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ADA279C1C15406700899CED /* VirtualPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPetUITests.swift; sourceTree = "<group>"; };
+		5ADA279E1C15406700899CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ADA27721C15406600899CED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ADA278A1C15406700899CED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ADA27951C15406700899CED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5ADA276C1C15406600899CED = {
+			isa = PBXGroup;
+			children = (
+				5ADA27771C15406700899CED /* VirtualPet */,
+				5ADA27901C15406700899CED /* VirtualPetTests */,
+				5ADA279B1C15406700899CED /* VirtualPetUITests */,
+				5ADA27761C15406700899CED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5ADA27761C15406700899CED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA27751C15406700899CED /* VirtualPet.app */,
+				5ADA278D1C15406700899CED /* VirtualPetTests.xctest */,
+				5ADA27981C15406700899CED /* VirtualPetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ADA27771C15406700899CED /* VirtualPet */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA27781C15406700899CED /* AppDelegate.swift */,
+				5ADA277A1C15406700899CED /* GameScene.sks */,
+				5ADA277C1C15406700899CED /* GameScene.swift */,
+				5ADA277E1C15406700899CED /* GameViewController.swift */,
+				5ADA27801C15406700899CED /* Main.storyboard */,
+				5ADA27831C15406700899CED /* Assets.xcassets */,
+				5ADA27851C15406700899CED /* LaunchScreen.storyboard */,
+				5ADA27881C15406700899CED /* Info.plist */,
+			);
+			path = VirtualPet;
+			sourceTree = "<group>";
+		};
+		5ADA27901C15406700899CED /* VirtualPetTests */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA27911C15406700899CED /* VirtualPetTests.swift */,
+				5ADA27931C15406700899CED /* Info.plist */,
+			);
+			path = VirtualPetTests;
+			sourceTree = "<group>";
+		};
+		5ADA279B1C15406700899CED /* VirtualPetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA279C1C15406700899CED /* VirtualPetUITests.swift */,
+				5ADA279E1C15406700899CED /* Info.plist */,
+			);
+			path = VirtualPetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ADA27741C15406600899CED /* VirtualPet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ADA27A11C15406700899CED /* Build configuration list for PBXNativeTarget "VirtualPet" */;
+			buildPhases = (
+				5ADA27711C15406600899CED /* Sources */,
+				5ADA27721C15406600899CED /* Frameworks */,
+				5ADA27731C15406600899CED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VirtualPet;
+			productName = VirtualPet;
+			productReference = 5ADA27751C15406700899CED /* VirtualPet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5ADA278C1C15406700899CED /* VirtualPetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ADA27A41C15406700899CED /* Build configuration list for PBXNativeTarget "VirtualPetTests" */;
+			buildPhases = (
+				5ADA27891C15406700899CED /* Sources */,
+				5ADA278A1C15406700899CED /* Frameworks */,
+				5ADA278B1C15406700899CED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5ADA278F1C15406700899CED /* PBXTargetDependency */,
+			);
+			name = VirtualPetTests;
+			productName = VirtualPetTests;
+			productReference = 5ADA278D1C15406700899CED /* VirtualPetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5ADA27971C15406700899CED /* VirtualPetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ADA27A71C15406700899CED /* Build configuration list for PBXNativeTarget "VirtualPetUITests" */;
+			buildPhases = (
+				5ADA27941C15406700899CED /* Sources */,
+				5ADA27951C15406700899CED /* Frameworks */,
+				5ADA27961C15406700899CED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5ADA279A1C15406700899CED /* PBXTargetDependency */,
+			);
+			name = VirtualPetUITests;
+			productName = VirtualPetUITests;
+			productReference = 5ADA27981C15406700899CED /* VirtualPetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ADA276D1C15406600899CED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Kiv Celik";
+				TargetAttributes = {
+					5ADA27741C15406600899CED = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					5ADA278C1C15406700899CED = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 5ADA27741C15406600899CED;
+					};
+					5ADA27971C15406700899CED = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 5ADA27741C15406600899CED;
+					};
+				};
+			};
+			buildConfigurationList = 5ADA27701C15406600899CED /* Build configuration list for PBXProject "VirtualPet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5ADA276C1C15406600899CED;
+			productRefGroup = 5ADA27761C15406700899CED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ADA27741C15406600899CED /* VirtualPet */,
+				5ADA278C1C15406700899CED /* VirtualPetTests */,
+				5ADA27971C15406700899CED /* VirtualPetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ADA27731C15406600899CED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADA277B1C15406700899CED /* GameScene.sks in Resources */,
+				5ADA27871C15406700899CED /* LaunchScreen.storyboard in Resources */,
+				5ADA27841C15406700899CED /* Assets.xcassets in Resources */,
+				5ADA27821C15406700899CED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ADA278B1C15406700899CED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ADA27961C15406700899CED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ADA27711C15406600899CED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADA277D1C15406700899CED /* GameScene.swift in Sources */,
+				5ADA277F1C15406700899CED /* GameViewController.swift in Sources */,
+				5ADA27791C15406700899CED /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ADA27891C15406700899CED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADA27921C15406700899CED /* VirtualPetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ADA27941C15406700899CED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADA279D1C15406700899CED /* VirtualPetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5ADA278F1C15406700899CED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ADA27741C15406600899CED /* VirtualPet */;
+			targetProxy = 5ADA278E1C15406700899CED /* PBXContainerItemProxy */;
+		};
+		5ADA279A1C15406700899CED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ADA27741C15406600899CED /* VirtualPet */;
+			targetProxy = 5ADA27991C15406700899CED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5ADA27801C15406700899CED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ADA27811C15406700899CED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5ADA27851C15406700899CED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ADA27861C15406700899CED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5ADA279F1C15406700899CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5ADA27A01C15406700899CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ADA27A21C15406700899CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VirtualPet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KivCelik.VirtualPet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5ADA27A31C15406700899CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VirtualPet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KivCelik.VirtualPet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5ADA27A51C15406700899CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = VirtualPetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KivCelik.VirtualPetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VirtualPet.app/VirtualPet";
+			};
+			name = Debug;
+		};
+		5ADA27A61C15406700899CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VirtualPetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KivCelik.VirtualPetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VirtualPet.app/VirtualPet";
+			};
+			name = Release;
+		};
+		5ADA27A81C15406700899CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = VirtualPetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KivCelik.VirtualPetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VirtualPet;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5ADA27A91C15406700899CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VirtualPetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KivCelik.VirtualPetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VirtualPet;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ADA27701C15406600899CED /* Build configuration list for PBXProject "VirtualPet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADA279F1C15406700899CED /* Debug */,
+				5ADA27A01C15406700899CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ADA27A11C15406700899CED /* Build configuration list for PBXNativeTarget "VirtualPet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADA27A21C15406700899CED /* Debug */,
+				5ADA27A31C15406700899CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5ADA27A41C15406700899CED /* Build configuration list for PBXNativeTarget "VirtualPetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADA27A51C15406700899CED /* Debug */,
+				5ADA27A61C15406700899CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5ADA27A71C15406700899CED /* Build configuration list for PBXNativeTarget "VirtualPetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADA27A81C15406700899CED /* Debug */,
+				5ADA27A91C15406700899CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5ADA276D1C15406600899CED /* Project object */;
+}
