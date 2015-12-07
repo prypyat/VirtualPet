@@ -6,40 +6,319 @@
 //  Copyright (c) 2015 Kiv Celik. All rights reserved.
 //
 
+import UIKit
 import SpriteKit
 
-class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 45;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+class GameScene: SKScene
+{
+    var state: String = "Idle"
+    
+    var sleepiness: Float = 100
+    var hunger: Float = 100
+    var health: Float = 100
+    var fun: Float = 100
+    var age: Float = 0
+    
+    var sleepAct: Float = 0
+    var hungerAct: Float = 0
+    var healthAct: Float = 0
+    var funAct: Float = 0
+    
+    var great = SKSpriteNode(imageNamed: "great")
+    var good = SKSpriteNode(imageNamed: "good")
+    var okay = SKSpriteNode(imageNamed: "okay")
+    var bad = SKSpriteNode(imageNamed: "bad")
+    
+    var eatface = SKSpriteNode(imageNamed: "eat")
+    var funface = SKSpriteNode(imageNamed: "fun")
+    var sleepface = SKSpriteNode(imageNamed: "sleep")
+    var healthface = SKSpriteNode(imageNamed: "health")
+    
+    var play = SKSpriteNode(imageNamed: "play")
+    var clean = SKSpriteNode(imageNamed: "clean")
+    var eatbutton = SKSpriteNode(imageNamed: "eatbutton")
+    var sleepbutton = SKSpriteNode(imageNamed: "sleepbutton")
+    
+    var playIcon = SKSpriteNode(imageNamed: "play")
+    var cleanIcon = SKSpriteNode(imageNamed: "clean")
+    var eatbuttonIcon = SKSpriteNode(imageNamed: "eatbutton")
+    var sleepbuttonIcon = SKSpriteNode(imageNamed: "sleepbutton")
+    
+    var sleepLabel = SKLabelNode(fontNamed: "TrebuchetMS-Bold")
+    var hungerLabel = SKLabelNode(fontNamed: "TrebuchetMS-Bold")
+    var healthLabel = SKLabelNode(fontNamed: "TrebuchetMS-Bold")
+    var funLabel = SKLabelNode(fontNamed: "TrebuchetMS-Bold")
+    var ageLabel = SKLabelNode(fontNamed: "TrebuchetMS-Bold")
+    
+    var ripip = SKSpriteNode(imageNamed: "rip")
+
+    
+    override func didMoveToView(view: SKView)
+    {
+        backgroundColor = SKColor.whiteColor()
         
-        self.addChild(myLabel)
+        createPet()
+        
+        createButtons()
+        
+        createIcons()
+        
+        createMeters()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
-        
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+       
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+        guard let touch = touches.first else
+        {
+            return
         }
+        let touchLocation = touch.locationInNode(self)
+        
+        if (state != "Idle")
+        {
+            state = "Idle"
+            
+            sleepAct = 0
+            hungerAct = 0
+            healthAct = 0
+            funAct = 0
+            
+            createButtons()
+        }
+        
+        if (play.containsPoint(touchLocation) && state == "Idle")
+        {
+            state = "Play"
+           
+            sleepAct = -1
+            hungerAct = -1
+            healthAct = 0
+            funAct = 50
+            
+            destroyButtons()
+        }
+        
+        if (eatbutton.containsPoint(touchLocation) && state == "Idle")
+        {
+            state = "Eat"
+            
+            sleepAct = 0
+            hungerAct = 50
+            healthAct = -1
+            funAct = 0
+            
+            destroyButtons()
+        }
+
+        if (clean.containsPoint(touchLocation) && state == "Idle")
+        {
+            state = "Clean"
+            
+            sleepAct = 0
+            hungerAct = 0
+            healthAct = 50
+            funAct = -1
+            
+            destroyButtons()
+        }
+
+        if (sleepbutton.containsPoint(touchLocation) && state == "Idle")
+        {
+            state = "Sleep"
+            
+            sleepAct = 50
+            hungerAct = 0
+            healthAct = 0
+            funAct = 0
+            
+            destroyButtons()
+        }
+
     }
    
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+    override func update(currentTime: CFTimeInterval)
+    {
+        sleepiness = sleepiness + ((SleepDecay + sleepAct)/100)*TimeScale
+        hunger = hunger + ((FoodDecay + hungerAct)/100)*TimeScale
+        health = health + ((HealthDecay + healthAct)/100)*TimeScale
+        fun = fun + ((FunDecay + funAct)/100)*TimeScale
+        
+        if sleepiness > 100 {sleepiness = 100}
+        if hunger > 100 {hunger = 100}
+        if health > 100 {health = 100}
+        if fun > 100 {fun = 100}
+        
+        if sleepiness < 00 {sleepiness = 00}
+        if hunger < 00 {hunger = 00}
+        if health < 00 {health = 00}
+        if fun < 00 {fun = 00}
+        
+        sleepLabel.text = String(format: "%.2f", sleepiness)
+        hungerLabel.text = String(format: "%.2f", hunger)
+        healthLabel.text = String(format: "%.2f", health)
+        funLabel.text = String(format: "%.2f", fun)
+        ageLabel.text = String(format: "%.2f", age)
+        
+        
+        if (sleepiness > 75 && hunger > 75 && health > 75 && fun > 75)
+        {
+            great.hidden = false
+            good.hidden = true
+            okay.hidden = true
+            bad.hidden = true
+        }
+        
+        if (sleepiness < 75 || hunger < 75 || health < 75 || fun < 75)
+        {
+            great.hidden = true
+            good.hidden = false
+            okay.hidden = true
+            bad.hidden = true
+        }
+        
+        if (sleepiness < 50 || hunger < 50 || health < 50 || fun < 50)
+        {
+            great.hidden = true
+            good.hidden = true
+            okay.hidden = false
+            bad.hidden = true
+        }
+        
+        if (sleepiness < 25 || hunger < 25 || health < 25 || fun < 25)
+        {
+            great.hidden = true
+            good.hidden = true
+            okay.hidden = true
+            bad.hidden = false
+        }
     }
+    
+    func createButtons()
+    {
+        play.position = CGPoint(x: size.width/5*1.75, y: size.height/6.5)
+        play.name = "playButton"
+        play.setScale(0.5)
+        addChild(play)
+        
+        clean.position = CGPoint(x: size.width/5*2.25, y: size.height/6.5)
+        clean.name = "cleanButton"
+        clean.setScale(0.5)
+        addChild(clean)
+        
+        eatbutton.position = CGPoint(x: size.width/5*2.75, y: size.height/6.5)
+        eatbutton.name = "eatButton"
+        eatbutton.setScale(0.5)
+        addChild(eatbutton)
+        
+        sleepbutton.position = CGPoint(x: size.width/5*3.25, y: size.height/6.5)
+        sleepbutton.name = "sleepButton"
+        sleepbutton.setScale(0.5)
+        addChild(sleepbutton)
+    }
+    
+    func destroyButtons()
+    {
+        play.removeFromParent()
+        clean.removeFromParent()
+        eatbutton.removeFromParent()
+        sleepbutton.removeFromParent()
+    }
+    
+    func createIcons()
+    {
+        playIcon.position = CGPoint(x: size.width/5*1.75, y: size.height/1.1)
+        playIcon.setScale(0.25)
+        addChild(playIcon)
+        
+        cleanIcon.position = CGPoint(x: size.width/5*1.75, y: size.height/1.3)
+        cleanIcon.setScale(0.25)
+        addChild(cleanIcon)
+        
+        eatbuttonIcon.position = CGPoint(x: size.width/5*3.25, y: size.height/1.1)
+        eatbuttonIcon.setScale(0.25)
+        addChild(eatbuttonIcon)
+        
+        sleepbuttonIcon.position = CGPoint(x: size.width/5*3.25, y: size.height/1.3)
+        sleepbuttonIcon.setScale(0.25)
+        addChild(sleepbuttonIcon)
+    }
+    
+    func createMeters()
+    {
+        sleepLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
+        sleepLabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Top
+        sleepLabel.position = CGPoint(x: size.width/5*2.7, y: size.height/1.275)
+        sleepLabel.fontColor = SKColor(red: 156/255.0, green: 179/255.0, blue: 207/255.0, alpha: 1.0)
+        sleepLabel.fontSize = 30
+        addChild(sleepLabel)
+        
+        hungerLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
+        hungerLabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Top
+        hungerLabel.position = CGPoint(x: size.width/5*2.7, y: size.height/1.075)
+        hungerLabel.fontColor = SKColor(red: 156/255.0, green: 179/255.0, blue: 207/255.0, alpha: 1.0)
+        hungerLabel.fontSize = 30
+        addChild(hungerLabel)
+        
+        healthLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Right
+        healthLabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Top
+        healthLabel.position = CGPoint(x: size.width/5*2.3, y: size.height/1.275)
+        healthLabel.fontColor = SKColor(red: 156/255.0, green: 179/255.0, blue: 207/255.0, alpha: 1.0)
+        healthLabel.fontSize = 30
+        addChild(healthLabel)
+        
+        funLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Right
+        funLabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Top
+        funLabel.position = CGPoint(x: size.width/5*2.3, y: size.height/1.075)
+        funLabel.fontColor = SKColor(red: 156/255.0, green: 179/255.0, blue: 207/255.0, alpha: 1.0)
+        funLabel.fontSize = 30
+        addChild(funLabel)
+    }
+    
+    func createPet()
+    {
+        great.position = CGPoint(x: size.width/2, y: size.height/2)
+        good.position = CGPoint(x: size.width/2, y: size.height/2)
+        okay.position = CGPoint(x: size.width/2, y: size.height/2)
+        bad.position = CGPoint(x: size.width/2, y: size.height/2)
+        eatface.position = CGPoint(x: size.width/2, y: size.height/2)
+        sleepface.position = CGPoint(x: size.width/2, y: size.height/2)
+        funface.position = CGPoint(x: size.width/2, y: size.height/2)
+        healthface.position = CGPoint(x: size.width/2, y: size.height/2)
+
+        addChild(great)
+        addChild(good)
+        addChild(okay)
+        addChild(bad)
+        
+        great.hidden = false
+        good.hidden = true
+        okay.hidden = true
+        bad.hidden = true
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A4DC5561C1575CE00BA3EE9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DC5551C1575CE00BA3EE9 /* Constants.swift */; };
+		5A4DC5581C15775000BA3EE9 /* bad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC5571C15775000BA3EE9 /* bad.png */; };
+		5A4DC5611C15776F00BA3EE9 /* eat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC5591C15776F00BA3EE9 /* eat.png */; };
+		5A4DC5621C15776F00BA3EE9 /* fun.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC55A1C15776F00BA3EE9 /* fun.png */; };
+		5A4DC5631C15776F00BA3EE9 /* good.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC55B1C15776F00BA3EE9 /* good.png */; };
+		5A4DC5641C15776F00BA3EE9 /* great.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC55C1C15776F00BA3EE9 /* great.png */; };
+		5A4DC5651C15776F00BA3EE9 /* health.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC55D1C15776F00BA3EE9 /* health.png */; };
+		5A4DC5661C15776F00BA3EE9 /* okay.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC55E1C15776F00BA3EE9 /* okay.png */; };
+		5A4DC5671C15776F00BA3EE9 /* rip.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC55F1C15776F00BA3EE9 /* rip.png */; };
+		5A4DC5681C15776F00BA3EE9 /* sleep.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC5601C15776F00BA3EE9 /* sleep.png */; };
+		5A4DC5711C157F3400BA3EE9 /* clean.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC56D1C157F3400BA3EE9 /* clean.png */; };
+		5A4DC5721C157F3400BA3EE9 /* eatbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC56E1C157F3400BA3EE9 /* eatbutton.png */; };
+		5A4DC5731C157F3400BA3EE9 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC56F1C157F3400BA3EE9 /* play.png */; };
+		5A4DC5741C157F3400BA3EE9 /* sleepbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A4DC5701C157F3400BA3EE9 /* sleepbutton.png */; };
 		5ADA27791C15406700899CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA27781C15406700899CED /* AppDelegate.swift */; };
 		5ADA277B1C15406700899CED /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ADA277A1C15406700899CED /* GameScene.sks */; };
 		5ADA277D1C15406700899CED /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA277C1C15406700899CED /* GameScene.swift */; };
@@ -36,6 +50,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A4DC5551C1575CE00BA3EE9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5A4DC5571C15775000BA3EE9 /* bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bad.png; sourceTree = "<group>"; };
+		5A4DC5591C15776F00BA3EE9 /* eat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eat.png; sourceTree = "<group>"; };
+		5A4DC55A1C15776F00BA3EE9 /* fun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fun.png; sourceTree = "<group>"; };
+		5A4DC55B1C15776F00BA3EE9 /* good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good.png; sourceTree = "<group>"; };
+		5A4DC55C1C15776F00BA3EE9 /* great.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = great.png; sourceTree = "<group>"; };
+		5A4DC55D1C15776F00BA3EE9 /* health.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = health.png; sourceTree = "<group>"; };
+		5A4DC55E1C15776F00BA3EE9 /* okay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okay.png; sourceTree = "<group>"; };
+		5A4DC55F1C15776F00BA3EE9 /* rip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip.png; sourceTree = "<group>"; };
+		5A4DC5601C15776F00BA3EE9 /* sleep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleep.png; sourceTree = "<group>"; };
+		5A4DC56D1C157F3400BA3EE9 /* clean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clean.png; sourceTree = "<group>"; };
+		5A4DC56E1C157F3400BA3EE9 /* eatbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eatbutton.png; sourceTree = "<group>"; };
+		5A4DC56F1C157F3400BA3EE9 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		5A4DC5701C157F3400BA3EE9 /* sleepbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleepbutton.png; sourceTree = "<group>"; };
 		5ADA27751C15406700899CED /* VirtualPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADA27781C15406700899CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ADA277A1C15406700899CED /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -78,6 +106,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A4DC5541C15700800BA3EE9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A4DC56D1C157F3400BA3EE9 /* clean.png */,
+				5A4DC56E1C157F3400BA3EE9 /* eatbutton.png */,
+				5A4DC56F1C157F3400BA3EE9 /* play.png */,
+				5A4DC5701C157F3400BA3EE9 /* sleepbutton.png */,
+				5A4DC5591C15776F00BA3EE9 /* eat.png */,
+				5A4DC55A1C15776F00BA3EE9 /* fun.png */,
+				5A4DC55B1C15776F00BA3EE9 /* good.png */,
+				5A4DC55C1C15776F00BA3EE9 /* great.png */,
+				5A4DC55D1C15776F00BA3EE9 /* health.png */,
+				5A4DC55E1C15776F00BA3EE9 /* okay.png */,
+				5A4DC55F1C15776F00BA3EE9 /* rip.png */,
+				5A4DC5601C15776F00BA3EE9 /* sleep.png */,
+				5A4DC5571C15775000BA3EE9 /* bad.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		5ADA276C1C15406600899CED = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +149,8 @@
 		5ADA27771C15406700899CED /* VirtualPet */ = {
 			isa = PBXGroup;
 			children = (
+				5A4DC5541C15700800BA3EE9 /* Resources */,
+				5A4DC5551C1575CE00BA3EE9 /* Constants.swift */,
 				5ADA27781C15406700899CED /* AppDelegate.swift */,
 				5ADA277A1C15406700899CED /* GameScene.sks */,
 				5ADA277C1C15406700899CED /* GameScene.swift */,
@@ -199,6 +249,11 @@
 				TargetAttributes = {
 					5ADA27741C15406600899CED = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					5ADA278C1C15406700899CED = {
 						CreatedOnToolsVersion = 7.1;
@@ -235,8 +290,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4DC5611C15776F00BA3EE9 /* eat.png in Resources */,
+				5A4DC5731C157F3400BA3EE9 /* play.png in Resources */,
+				5A4DC5581C15775000BA3EE9 /* bad.png in Resources */,
 				5ADA277B1C15406700899CED /* GameScene.sks in Resources */,
+				5A4DC5651C15776F00BA3EE9 /* health.png in Resources */,
+				5A4DC5641C15776F00BA3EE9 /* great.png in Resources */,
 				5ADA27871C15406700899CED /* LaunchScreen.storyboard in Resources */,
+				5A4DC5721C157F3400BA3EE9 /* eatbutton.png in Resources */,
+				5A4DC5631C15776F00BA3EE9 /* good.png in Resources */,
+				5A4DC5711C157F3400BA3EE9 /* clean.png in Resources */,
+				5A4DC5741C157F3400BA3EE9 /* sleepbutton.png in Resources */,
+				5A4DC5681C15776F00BA3EE9 /* sleep.png in Resources */,
+				5A4DC5621C15776F00BA3EE9 /* fun.png in Resources */,
+				5A4DC5661C15776F00BA3EE9 /* okay.png in Resources */,
+				5A4DC5671C15776F00BA3EE9 /* rip.png in Resources */,
 				5ADA27841C15406700899CED /* Assets.xcassets in Resources */,
 				5ADA27821C15406700899CED /* Main.storyboard in Resources */,
 			);
@@ -266,6 +334,7 @@
 				5ADA277D1C15406700899CED /* GameScene.swift in Sources */,
 				5ADA277F1C15406700899CED /* GameViewController.swift in Sources */,
 				5ADA27791C15406700899CED /* AppDelegate.swift in Sources */,
+				5A4DC5561C1575CE00BA3EE9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +563,7 @@
 				5ADA27A31C15406700899CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5ADA27A41C15406700899CED /* Build configuration list for PBXNativeTarget "VirtualPetTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +572,7 @@
 				5ADA27A61C15406700899CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5ADA27A71C15406700899CED /* Build configuration list for PBXNativeTarget "VirtualPetUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +581,7 @@
 				5ADA27A91C15406700899CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
