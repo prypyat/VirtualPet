@@ -8,7 +8,7 @@
 
 import Foundation
 
-let TimeScale: Float = 50
+let TimeScale: Float = 5
 
 let SleepDecay: Float = -1
 

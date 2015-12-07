@@ -79,7 +79,39 @@ class GameScene: SKScene
         }
         let touchLocation = touch.locationInNode(self)
         
-        if (state != "Idle")
+        if (state == "Dead")
+        {
+            sleepiness  = 100
+            hunger  = 100
+            health  = 100
+            fun  = 100
+            age  = 0
+            
+            state = "Idle"
+            
+            sleepAct = 0
+            hungerAct = 0
+            healthAct = 0
+            funAct = 0
+            
+            healthface.hidden = false
+            eatface.hidden = true
+            sleepface.hidden = true
+            funface.hidden = true
+            ripip.hidden = true
+            healthface.hidden = true
+            eatface.hidden = true
+            sleepface.hidden = true
+            funface.hidden = true
+            
+            createButtons()
+            createMeters()
+            createIcons()
+            
+
+        }
+        
+        if (state != "Idle" && state != "Dead")
         {
             state = "Idle"
             
@@ -87,6 +119,11 @@ class GameScene: SKScene
             hungerAct = 0
             healthAct = 0
             funAct = 0
+            
+            healthface.hidden = true
+            eatface.hidden = true
+            sleepface.hidden = true
+            funface.hidden = true
             
             createButtons()
         }
@@ -98,7 +135,16 @@ class GameScene: SKScene
             sleepAct = -1
             hungerAct = -1
             healthAct = 0
-            funAct = 50
+            funAct = 5
+            
+            great.hidden = true
+            good.hidden = true
+            okay.hidden = true
+            bad.hidden = true
+            healthface.hidden = true
+            eatface.hidden = true
+            sleepface.hidden = true
+            funface.hidden = false
             
             destroyButtons()
         }
@@ -108,9 +154,18 @@ class GameScene: SKScene
             state = "Eat"
             
             sleepAct = 0
-            hungerAct = 50
+            hungerAct = 5
             healthAct = -1
             funAct = 0
+            
+            great.hidden = true
+            good.hidden = true
+            okay.hidden = true
+            bad.hidden = true
+            healthface.hidden = true
+            eatface.hidden = false
+            sleepface.hidden = true
+            funface.hidden = true
             
             destroyButtons()
         }
@@ -121,8 +176,17 @@ class GameScene: SKScene
             
             sleepAct = 0
             hungerAct = 0
-            healthAct = 50
+            healthAct = 5
             funAct = -1
+            
+            great.hidden = true
+            good.hidden = true
+            okay.hidden = true
+            bad.hidden = true
+            healthface.hidden = false
+            eatface.hidden = true
+            sleepface.hidden = true
+            funface.hidden = true
             
             destroyButtons()
         }
@@ -131,10 +195,19 @@ class GameScene: SKScene
         {
             state = "Sleep"
             
-            sleepAct = 50
+            sleepAct = 5
             hungerAct = 0
             healthAct = 0
             funAct = 0
+            
+            great.hidden = true
+            good.hidden = true
+            okay.hidden = true
+            bad.hidden = true
+            healthface.hidden = true
+            eatface.hidden = true
+            sleepface.hidden = false
+            funface.hidden = true
             
             destroyButtons()
         }
@@ -165,7 +238,7 @@ class GameScene: SKScene
         ageLabel.text = String(format: "%.2f", age)
         
         
-        if (sleepiness > 75 && hunger > 75 && health > 75 && fun > 75)
+        if (sleepiness > 75 && hunger > 75 && health > 75 && fun > 75 && state == "Idle")
         {
             great.hidden = false
             good.hidden = true
@@ -173,7 +246,7 @@ class GameScene: SKScene
             bad.hidden = true
         }
         
-        if (sleepiness < 75 || hunger < 75 || health < 75 || fun < 75)
+        if ((sleepiness < 75 || hunger < 75 || health < 75 || fun < 75) && state == "Idle")
         {
             great.hidden = true
             good.hidden = false
@@ -181,7 +254,7 @@ class GameScene: SKScene
             bad.hidden = true
         }
         
-        if (sleepiness < 50 || hunger < 50 || health < 50 || fun < 50)
+        if ((sleepiness < 50 || hunger < 50 || health < 50 || fun < 50) && state == "Idle")
         {
             great.hidden = true
             good.hidden = true
@@ -189,12 +262,31 @@ class GameScene: SKScene
             bad.hidden = true
         }
         
-        if (sleepiness < 25 || hunger < 25 || health < 25 || fun < 25)
+        if ((sleepiness < 25 || hunger < 25 || health < 25 || fun < 25) && state == "Idle")
         {
             great.hidden = true
             good.hidden = true
             okay.hidden = true
             bad.hidden = false
+        }
+        
+        if (sleepiness == 0 || hunger == 0 || health == 0 || fun == 0)
+        {
+            destroyButtons()
+            destroyIcons()
+            destroyMeters()
+            
+            great.hidden = true
+            good.hidden = true
+            okay.hidden = true
+            bad.hidden = true
+            healthface.hidden = true
+            eatface.hidden = true
+            sleepface.hidden = true
+            funface.hidden = true
+            ripip.hidden = false
+            
+            state = "Dead"
         }
     }
     
@@ -248,6 +340,14 @@ class GameScene: SKScene
         addChild(sleepbuttonIcon)
     }
     
+    func destroyIcons()
+    {
+        playIcon.removeFromParent()
+        cleanIcon.removeFromParent()
+        eatbuttonIcon.removeFromParent()
+        sleepbuttonIcon.removeFromParent()
+    }
+    
     func createMeters()
     {
         sleepLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
@@ -279,6 +379,14 @@ class GameScene: SKScene
         addChild(funLabel)
     }
     
+    func destroyMeters()
+    {
+        sleepLabel.removeFromParent()
+        hungerLabel.removeFromParent()
+        healthLabel.removeFromParent()
+        funLabel.removeFromParent()
+    }
+    
     func createPet()
     {
         great.position = CGPoint(x: size.width/2, y: size.height/2)
@@ -289,17 +397,29 @@ class GameScene: SKScene
         sleepface.position = CGPoint(x: size.width/2, y: size.height/2)
         funface.position = CGPoint(x: size.width/2, y: size.height/2)
         healthface.position = CGPoint(x: size.width/2, y: size.height/2)
+        ripip.position = CGPoint(x: size.width/2, y: size.height/2)
+
 
         addChild(great)
         addChild(good)
         addChild(okay)
         addChild(bad)
         addChild(eatface)
+        addChild(sleepface)
+        addChild(funface)
+        addChild(healthface)
+        addChild(ripip)
+
         
         great.hidden = false
         good.hidden = true
         okay.hidden = true
         bad.hidden = true
+        healthface.hidden = true
+        eatface.hidden = true
+        sleepface.hidden = true
+        funface.hidden = true
+        ripip.hidden = true
     }
     
 }
